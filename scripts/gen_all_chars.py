@@ -29,6 +29,29 @@ NEG_EXTRA = ("from above, looking down, high angle, from below, low angle, fores
              "nude, naked, topless, bottomless, nipples, pussy, uncensored, "
              "underwear, lingerie, bikini, swimsuit")
 
+# 姿势按角色轮换（用户 2026-09-16 反馈"怎么都是站立"）。
+# 姿势名必须是 studio_gen.py POSES 表里的合法值，否则会 KeyError；
+# 动作细节走 extra，用 danbooru 通用 tag。
+# 刻意回避 spread_legs / all_fours / lying 等不适合验收立绘的姿势，
+# 也不放 looking_back / bent_over —— 会和上面锁视角的 from behind 压制词打架。
+POSE_CYCLE = [
+    ("standing",        "hand_on_hip"),
+    ("sitting",         "legs_crossed"),
+    ("standing",        "waving"),
+    ("walking",         "hair_flip"),
+    ("kneeling",        "holding_sword"),
+    ("running",         ""),
+    ("squatting",       "peace_sign"),
+    ("standing",        "arms_crossed"),
+    ("sitting",         "hand_on_cheek"),
+    ("leaning_forward", "hand_on_hip"),
+    ("standing",        "holding_sword"),
+    ("sitting",         "legs_crossed"),
+    ("walking",         "waving"),
+    ("standing",        "covering_mouth"),
+    ("standing",        "stretching"),
+]
+
 # 各角色标志性造型。不点名服装时模型自由发挥（实测胡桃穿成黑毛衣+牛仔裤，甚至直接裸体）。
 # 全部用 danbooru 通用 tag，与训练 caption 同一套词表。
 OUTFIT = {
@@ -77,12 +100,17 @@ def main():
         name = cn.get(cid) or cid
         tag = "%s(%s)" % (name, cid)
         outfit = OUTFIT.get(cid) or FANREN_OUTFIT
+        pose, action = POSE_CYCLE[(i - 1) % len(POSE_CYCLE)]
+        extra = EXTRA + ", " + outfit
+        if action:
+            extra += ", " + action
         params = {"characters": cid, "filename": "%s_验收" % name,
-                  "extra": EXTRA + ", " + outfit, "negative": NEG_EXTRA}
+                  "pose": pose, "extra": extra, "negative": NEG_EXTRA}
         cw = os.environ.get("CHAR_LORA_WEIGHT")
         if cw:
             params["char_lora_weight"] = float(cw)
-        print("[%d/%d] %s  outfit=%s" % (i, len(targets), tag, outfit), flush=True)
+        print("[%d/%d] %s  pose=%s/%s  outfit=%s"
+              % (i, len(targets), tag, pose, action or "-", outfit), flush=True)
         try:
             r = subprocess.run(["python3", SCRIPT, "--params", "-"],
                                input=json.dumps(params), capture_output=True,
