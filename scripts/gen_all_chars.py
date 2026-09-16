@@ -18,7 +18,39 @@ GD = "/home/xiaozeng/lora_train/genshin_dataset"
 SCRIPT = os.path.join(GD, "scripts", "studio_gen.py")
 OUT_DIR = "/home/xiaozeng/deepseek工作区/图片生成"
 DEST = os.path.join(OUT_DIR, "角色验收")
-EXTRA = "looking at viewer, smile, simple background"
+
+# 视角锁定 + 穿着要求。训练素材里俯视/背面/裸露构图占比高，LoRA 会把这种倾向带出来
+# （技能踩坑 6：LoRA 权重会压过 prompt 里的构图词）。所以正向显式锁平视正面、
+# 负向压掉其他机位与裸露，否则实测大部分图是俯视、背面甚至全裸。
+EXTRA = ("from front, eye level, straight-on, facing viewer, looking at viewer, smile, "
+         "fully clothed, simple background")
+NEG_EXTRA = ("from above, looking down, high angle, from below, low angle, foreshortening, "
+             "from behind, back view, wide angle, dutch angle, head out of frame, "
+             "nude, naked, topless, bottomless, nipples, pussy, uncensored, "
+             "underwear, lingerie, bikini, swimsuit")
+
+# 各角色标志性造型。不点名服装时模型自由发挥（实测胡桃穿成黑毛衣+牛仔裤，甚至直接裸体）。
+# 全部用 danbooru 通用 tag，与训练 caption 同一套词表。
+OUTFIT = {
+    "arlecchino":         "white_jacket, black_pants, gloves",
+    "barbara":            "white_dress, nun, cross_necklace",
+    "eula":               "white_jacket, black_shorts, thighhighs, cape",
+    "fischl":             "eyepatch, black_dress, purple_cape, twintails",
+    "furina":             "top_hat, blue_coat, shorts, bowtie",
+    "hu_tao":             "porkpie_hat, chinese_clothes, brown_jacket, black_shorts, twin_braids",
+    "jean":               "white_shirt, blue_skirt, cape",
+    "kamisato_ayaka":     "japanese_clothes, hair_ornament, white_dress",
+    "keqing":             "purple_dress, thighhighs, hair_ornament",
+    "lynette":            "cat_ears, maid, white_apron, hair_ribbon",
+    "mona":               "witch_hat, black_dress, thighhighs, cape",
+    "sangonomiya_kokomi": "japanese_clothes, bow, hair_ornament",
+    "shenhe":             "chinese_clothes, white_dress, hair_ornament",
+    "xiangling":          "chinese_clothes, hair_flower, white_shirt",
+    "yae_miko":           "fox_ears, japanese_clothes, shrine_maiden",
+    "yoimiya":            "japanese_clothes, hair_flower, hair_ribbon",
+}
+# 凡人修仙传角色：素材 caption 里没有服装描述（只有 id/作品/1girl/solo），用通用仙侠服装
+FANREN_OUTFIT = "chinese_clothes, hanfu, ancient_chinese_clothes, long_hair"
 
 
 def cn_map():
@@ -44,8 +76,13 @@ def main():
     for i, cid in enumerate(targets, 1):
         name = cn.get(cid) or cid
         tag = "%s(%s)" % (name, cid)
-        params = {"characters": cid, "filename": "%s_验收" % name, "extra": EXTRA}
-        print("[%d/%d] %s" % (i, len(targets), tag), flush=True)
+        outfit = OUTFIT.get(cid) or FANREN_OUTFIT
+        params = {"characters": cid, "filename": "%s_验收" % name,
+                  "extra": EXTRA + ", " + outfit, "negative": NEG_EXTRA}
+        cw = os.environ.get("CHAR_LORA_WEIGHT")
+        if cw:
+            params["char_lora_weight"] = float(cw)
+        print("[%d/%d] %s  outfit=%s" % (i, len(targets), tag, outfit), flush=True)
         try:
             r = subprocess.run(["python3", SCRIPT, "--params", "-"],
                                input=json.dumps(params), capture_output=True,

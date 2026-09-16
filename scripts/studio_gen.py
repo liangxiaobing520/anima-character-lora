@@ -566,6 +566,7 @@ def main():
     chars = p.get("characters") or []
     if isinstance(chars, str):
         chars = [c.strip() for c in chars.replace("，", ",").split(",") if c.strip()]
+    cw = p.get("char_lora_weight")      # 临时压低角色 LoRA 强度（构图被 LoRA 带偏时用）
     for c in chars:
         try:
             tag = resolve(CHARACTERS, c, "角色")
@@ -573,6 +574,8 @@ def main():
             continue
         got = ensure_char_lora(tag)
         if got:
+            if cw is not None:
+                got = (got[0], float(cw))
             loras.append(got)
     for item in (p.get("loras") or []):
         if isinstance(item, str):
