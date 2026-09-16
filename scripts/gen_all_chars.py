@@ -19,15 +19,17 @@ SCRIPT = os.path.join(GD, "scripts", "studio_gen.py")
 OUT_DIR = "/home/xiaozeng/deepseek工作区/图片生成"
 DEST = os.path.join(OUT_DIR, "角色验收")
 
-# 视角锁定 + 穿着要求。训练素材里俯视/背面/裸露构图占比高，LoRA 会把这种倾向带出来
-# （技能踩坑 6：LoRA 权重会压过 prompt 里的构图词）。所以正向显式锁平视正面、
-# 负向压掉其他机位与裸露，否则实测大部分图是俯视、背面甚至全裸。
+# 视角锁定 + 性别 + 穿着。三个坑都在这里：
+#   1) 训练素材俯视/背面/裸露构图占比高，LoRA 会把倾向带出来（技能踩坑 6），要锁平视正面
+#   2) studio_gen.py 单人分支不输出 "1girl"（只有多人时才加 "Ngirls"），而训练 caption
+#      每张都带 1girl —— 训练/推理不一致，凡人那几个 3D 素材训出的 LoRA 会画成中性/男性脸
+#   3) 服装不点名则模型自由发挥（实测胡桃穿成黑毛衣+牛仔裤，甚至直接裸体）
 EXTRA = ("from front, eye level, straight-on, facing viewer, looking at viewer, smile, "
-         "fully clothed, simple background")
+         "1girl, solo, female, fully clothed, simple background")
 NEG_EXTRA = ("from above, looking down, high angle, from below, low angle, foreshortening, "
              "from behind, back view, wide angle, dutch angle, head out of frame, "
-             "nude, naked, topless, bottomless, nipples, pussy, uncensored, "
-             "underwear, lingerie, bikini, swimsuit")
+             "1boy, male, man, spread_legs, nude, naked, topless, bottomless, nipples, pussy, "
+             "uncensored, underwear, lingerie, bikini, swimsuit")
 
 # 姿势按角色轮换（用户 2026-09-16 反馈"怎么都是站立"）。
 # 姿势名必须是 studio_gen.py POSES 表里的合法值，否则会 KeyError；
@@ -72,8 +74,10 @@ OUTFIT = {
     "yae_miko":           "fox_ears, japanese_clothes, shrine_maiden",
     "yoimiya":            "japanese_clothes, hair_flower, hair_ribbon",
 }
-# 凡人修仙传角色：素材 caption 里没有服装描述（只有 id/作品/1girl/solo），用通用仙侠服装
-FANREN_OUTFIT = "chinese_clothes, hanfu, ancient_chinese_clothes, long_hair"
+# 凡人修仙传角色：素材 caption 里没有服装描述（只有 id/作品/1girl/solo），
+# 用通用女性仙侠装兜底 —— 注意必须带 dress 与发饰，否则道袍会画成中性/男装。
+FANREN_OUTFIT = ("chinese_clothes, hanfu, ancient_chinese_clothes, dress, "
+                 "hair_ornament, long_hair")
 
 
 def cn_map():
