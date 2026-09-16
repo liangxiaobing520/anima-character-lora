@@ -3,7 +3,7 @@
 基于 **Anima-Aesthetic** 底模 + [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts)
 的角色 LoRA **采集 → 构建 → 批量训练 → 导出**全流水线。
 
-已产出《原神》12 个、《凡人修仙传》7 个角色 LoRA，队列仍在跑，模型随 Releases 更新。
+已产出《原神》12 个、《凡人修仙传》8 个角色 LoRA，队列仍在跑，模型随 Releases 更新。
 
 [模型下载](#-模型下载) · [快速开始](#-快速开始) · [训练参数](#-训练参数) · [踩坑记录](#-踩坑记录)
 
@@ -22,8 +22,8 @@
 
 ## 📦 模型下载
 
-**19 个角色 LoRA**，每个约 **88 MB** —— `dim 32 / alpha 16 / 640px / bf16`。
-全部在 [**Releases**](../../releases) 页面按角色下载。
+**20 个角色 LoRA**，每个约 **88 MB** —— `dim 32 / alpha 16 / 640px / bf16`。
+全部在 [**Releases**](../../releases) 页面按角色下载（队列仍在训练，会继续追加）。
 
 | 角色 | ID | 文件 | 大小 |
 |---|---|---|---|
@@ -47,6 +47,7 @@
 | 慕沛灵 | `mu_peiling` | `mu_peiling_anima_lora.safetensors` | 88 MB |
 | 南宫婉 | `nangong_wan` | `nangong_wan_anima_lora.safetensors` | 88 MB |
 | 银月 | `yin_yue` | `yin_yue_anima_lora.safetensors` | 88 MB |
+| 元瑶 | `yuan_yao` | `yuan_yao_anima_lora.safetensors` | 88 MB |
 | 紫灵 | `zi_ling` | `zi_ling_anima_lora.safetensors` | 88 MB |
 
 **ComfyUI 用法**：把 `.safetensors` 放进 `ComfyUI/models/loras/`，然后在 prompt 里写
