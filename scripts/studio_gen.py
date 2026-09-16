@@ -91,6 +91,25 @@ CHARACTERS = {
     "yelan": "夜兰", "yoimiya": "宵宫", "yun_jin": "云堇",
 }
 
+
+# 从训练工程的角色表补充非原神角色（凡人修仙传等），避免两处维护。
+# characters.json 与本脚本同目录；文件缺失/格式异常时静默跳过，不影响原有功能。
+def _merge_external_chars():
+    _p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "characters.json")
+    try:
+        with open(_p, encoding="utf-8") as _f:
+            _rows = json.load(_f)
+    except Exception:
+        return
+    if isinstance(_rows, dict):
+        _rows = _rows.get("characters", [])
+    for _r in (_rows if isinstance(_rows, list) else []):
+        if isinstance(_r, dict) and _r.get("id") and _r.get("cn"):
+            CHARACTERS.setdefault(_r["id"], _r["cn"])   # 已硬编码的原神角色不覆盖
+
+
+_merge_external_chars()
+
 # 角色 LoRA：训练输出目录里存在 {tag}_anima_lora.safetensors 就自动登记，
 # 不必每训完一个新角色都回来改这张表。要换文件或调强度，写进 CHAR_LORA_OVERRIDES。
 CHAR_LORA_WEIGHT = 0.85          # 角色 LoRA 默认强度
