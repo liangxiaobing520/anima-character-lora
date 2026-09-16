@@ -28,8 +28,8 @@ EXTRA = ("from front, eye level, straight-on, facing viewer, looking at viewer, 
          "1girl, solo, female, fully clothed, simple background")
 NEG_EXTRA = ("from above, looking down, high angle, from below, low angle, foreshortening, "
              "from behind, back view, wide angle, dutch angle, head out of frame, "
-             "1boy, male, man, spread_legs, nude, naked, topless, bottomless, nipples, pussy, "
-             "uncensored, underwear, lingerie, bikini, swimsuit")
+             "1boy, male, man, spread_legs, nude, naked, topless, bottomless, nipples, "
+             "pussy, uncensored, underwear, lingerie, bikini, swimsuit")
 
 # 姿势按角色轮换（用户 2026-09-16 反馈"怎么都是站立"）。
 # 姿势名必须是 studio_gen.py POSES 表里的合法值，否则会 KeyError；
@@ -54,7 +54,7 @@ POSE_CYCLE = [
     ("standing",        "stretching"),
 ]
 
-# 各角色标志性造型。不点名服装时模型自由发挥（实测胡桃穿成黑毛衣+牛仔裤，甚至直接裸体）。
+# 原神角色：点名官方造型。不点名时模型自由发挥（实测胡桃穿成黑毛衣+牛仔裤，甚至直接裸体）。
 # 全部用 danbooru 通用 tag，与训练 caption 同一套词表。
 OUTFIT = {
     "arlecchino":         "white_jacket, black_pants, gloves",
@@ -74,10 +74,25 @@ OUTFIT = {
     "yae_miko":           "fox_ears, japanese_clothes, shrine_maiden",
     "yoimiya":            "japanese_clothes, hair_flower, hair_ribbon",
 }
-# 凡人修仙传角色：素材 caption 里没有服装描述（只有 id/作品/1girl/solo），
-# 用通用女性仙侠装兜底 —— 注意必须带 dress 与发饰，否则道袍会画成中性/男装。
-FANREN_OUTFIT = ("chinese_clothes, hanfu, ancient_chinese_clothes, dress, "
-                 "hair_ornament, long_hair")
+
+# 凡人修仙传角色：素材 caption 无服装描述（只有 id/作品/1girl/solo），
+# 用户要求「随机女性古装」—— 所以给一个古装池按角色依次分配，
+# 每人一套不重样的女性仙侠装（发饰 / 发髻 / 腰封齐全，避免画成中性道袍）。
+FANREN_OUTFITS = [
+    "hanfu, ruqun, wide_sleeves, hair_ornament, hair_bun",
+    "chinese_clothes, long_dress, sash, hair_stick, long_hair",
+    "hanfu, white_dress, hair_ribbon, veil, long_hair",
+    "chinese_clothes, red_dress, hair_flower, long_sleeves, sash",
+    "hanfu, green_dress, wide_sleeves, hair_ornament, hair_bun",
+    "chinese_clothes, blue_dress, hairpin, long_hair, sash",
+    "hanfu, pink_dress, hair_ribbon, wide_sleeves, hair_stick",
+    "chinese_clothes, purple_dress, hair_ornament, hair_bun, sash",
+    "hanfu, yellow_dress, hair_stick, hair_bun, sash",
+    "chinese_clothes, cyan_dress, wide_sleeves, hair_ribbon, long_hair",
+    "hanfu, black_dress, sash, hair_ornament, hair_bun",
+    "chinese_clothes, silver_dress, long_sleeves, hair_stick, long_hair",
+    "hanfu, orange_dress, wide_sleeves, hair_flower, sash",
+]
 
 
 def cn_map():
@@ -100,10 +115,15 @@ def main():
     cn = cn_map()
     os.makedirs(DEST, exist_ok=True)
     ok, fail = [], []
+    fanren_i = 0
     for i, cid in enumerate(targets, 1):
         name = cn.get(cid) or cid
         tag = "%s(%s)" % (name, cid)
-        outfit = OUTFIT.get(cid) or FANREN_OUTFIT
+        if cid in OUTFIT:
+            outfit = OUTFIT[cid]
+        else:
+            outfit = FANREN_OUTFITS[fanren_i % len(FANREN_OUTFITS)]
+            fanren_i += 1
         pose, action = POSE_CYCLE[(i - 1) % len(POSE_CYCLE)]
         extra = EXTRA + ", " + outfit
         if action:
