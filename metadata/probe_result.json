@@ -1,0 +1,366 @@
+[
+ {
+  "id": "raiden_shogun",
+  "cn": "雷电将军",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": -1
+ },
+ {
+  "id": "yae_miko",
+  "cn": "八重神子",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": -1
+ },
+ {
+  "id": "ganyu",
+  "cn": "甘雨",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "shenhe",
+  "cn": "申鹤",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "eula",
+  "cn": "优菈",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "lisa",
+  "cn": "丽莎",
+  "yandere": 22,
+  "yandere_explicit": 1,
+  "safebooru": 100
+ },
+ {
+  "id": "ningguang",
+  "cn": "凝光",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "beidou",
+  "cn": "北斗",
+  "yandere": 100,
+  "yandere_explicit": 65,
+  "safebooru": 100
+ },
+ {
+  "id": "jean",
+  "cn": "琴",
+  "yandere": 3,
+  "yandere_explicit": 0,
+  "safebooru": 100
+ },
+ {
+  "id": "rosaria",
+  "cn": "罗莎莉亚",
+  "yandere": 100,
+  "yandere_explicit": 82,
+  "safebooru": 100
+ },
+ {
+  "id": "yelan",
+  "cn": "夜兰",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "kujou_sara",
+  "cn": "九条裟罗",
+  "yandere": 100,
+  "yandere_explicit": 87,
+  "safebooru": 26
+ },
+ {
+  "id": "arlecchino",
+  "cn": "阿蕾奇诺",
+  "yandere": 100,
+  "yandere_explicit": 96,
+  "safebooru": 100
+ },
+ {
+  "id": "clorinde",
+  "cn": "克洛琳德",
+  "yandere": 100,
+  "yandere_explicit": 65,
+  "safebooru": 100
+ },
+ {
+  "id": "navia",
+  "cn": "娜维娅",
+  "yandere": 100,
+  "yandere_explicit": 71,
+  "safebooru": 100
+ },
+ {
+  "id": "xianyun",
+  "cn": "闲云",
+  "yandere": 75,
+  "yandere_explicit": 28,
+  "safebooru": 100
+ },
+ {
+  "id": "chiori",
+  "cn": "千织",
+  "yandere": 100,
+  "yandere_explicit": 59,
+  "safebooru": 100
+ },
+ {
+  "id": "mavuika",
+  "cn": "玛薇卡",
+  "yandere": 100,
+  "yandere_explicit": 38,
+  "safebooru": 100
+ },
+ {
+  "id": "xilonen",
+  "cn": "希诺宁",
+  "yandere": 64,
+  "yandere_explicit": 33,
+  "safebooru": 100
+ },
+ {
+  "id": "citlali",
+  "cn": "茜特菈莉",
+  "yandere": 100,
+  "yandere_explicit": 61,
+  "safebooru": 100
+ },
+ {
+  "id": "skirk",
+  "cn": "丝柯克",
+  "yandere": 100,
+  "yandere_explicit": 23,
+  "safebooru": 100
+ },
+ {
+  "id": "candace",
+  "cn": "坎蒂丝",
+  "yandere": 100,
+  "yandere_explicit": 51,
+  "safebooru": 100
+ },
+ {
+  "id": "dehya",
+  "cn": "迪希雅",
+  "yandere": 100,
+  "yandere_explicit": 95,
+  "safebooru": 100
+ },
+ {
+  "id": "emilie",
+  "cn": "艾梅莉埃",
+  "yandere": 17,
+  "yandere_explicit": 9,
+  "safebooru": 78
+ },
+ {
+  "id": "la_signora",
+  "cn": "女士",
+  "yandere": 0,
+  "yandere_explicit": 0,
+  "safebooru": -1
+ },
+ {
+  "id": "lumine",
+  "cn": "荧",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "hu_tao",
+  "cn": "胡桃",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "keqing",
+  "cn": "刻晴",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "mona",
+  "cn": "莫娜",
+  "yandere": 2,
+  "yandere_explicit": 2,
+  "safebooru": 100
+ },
+ {
+  "id": "kamisato_ayaka",
+  "cn": "神里绫华",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 23
+ },
+ {
+  "id": "yoimiya",
+  "cn": "宵宫",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "sangonomiya_kokomi",
+  "cn": "珊瑚宫心海",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": -1
+ },
+ {
+  "id": "fischl",
+  "cn": "菲谢尔",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "barbara",
+  "cn": "芭芭拉",
+  "yandere": 2,
+  "yandere_explicit": 0,
+  "safebooru": 100
+ },
+ {
+  "id": "xiangling",
+  "cn": "香菱",
+  "yandere": 100,
+  "yandere_explicit": 60,
+  "safebooru": 100
+ },
+ {
+  "id": "noelle",
+  "cn": "诺艾尔",
+  "yandere": 11,
+  "yandere_explicit": 0,
+  "safebooru": 100
+ },
+ {
+  "id": "sucrose",
+  "cn": "砂糖",
+  "yandere": 100,
+  "yandere_explicit": 73,
+  "safebooru": 100
+ },
+ {
+  "id": "yanfei",
+  "cn": "烟绯",
+  "yandere": 100,
+  "yandere_explicit": 70,
+  "safebooru": 100
+ },
+ {
+  "id": "yun_jin",
+  "cn": "云堇",
+  "yandere": 100,
+  "yandere_explicit": 46,
+  "safebooru": 100
+ },
+ {
+  "id": "kuki_shinobu",
+  "cn": "久岐忍",
+  "yandere": 100,
+  "yandere_explicit": 51,
+  "safebooru": -1
+ },
+ {
+  "id": "nilou",
+  "cn": "妮露",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "layla",
+  "cn": "莱依拉",
+  "yandere": 7,
+  "yandere_explicit": 0,
+  "safebooru": 100
+ },
+ {
+  "id": "faruzan",
+  "cn": "珐露珊",
+  "yandere": 100,
+  "yandere_explicit": 85,
+  "safebooru": 100
+ },
+ {
+  "id": "lynette",
+  "cn": "琳妮特",
+  "yandere": 100,
+  "yandere_explicit": 48,
+  "safebooru": 100
+ },
+ {
+  "id": "furina",
+  "cn": "芙宁娜",
+  "yandere": 100,
+  "yandere_explicit": 100,
+  "safebooru": 100
+ },
+ {
+  "id": "charlotte",
+  "cn": "夏洛蒂",
+  "yandere": 100,
+  "yandere_explicit": 8,
+  "safebooru": 100
+ },
+ {
+  "id": "mualani",
+  "cn": "玛拉妮",
+  "yandere": 82,
+  "yandere_explicit": 39,
+  "safebooru": 100
+ },
+ {
+  "id": "chasca",
+  "cn": "恰斯卡",
+  "yandere": 16,
+  "yandere_explicit": 6,
+  "safebooru": 83
+ },
+ {
+  "id": "lan_yan",
+  "cn": "蓝砚",
+  "yandere": 27,
+  "yandere_explicit": 7,
+  "safebooru": 100
+ },
+ {
+  "id": "varesa",
+  "cn": "瓦蕾莎",
+  "yandere": 46,
+  "yandere_explicit": 11,
+  "safebooru": 100
+ },
+ {
+  "id": "escoffier",
+  "cn": "爱可菲",
+  "yandere": 24,
+  "yandere_explicit": 2,
+  "safebooru": 100
+ },
+ {
+  "id": "iansan",
+  "cn": "伊安珊",
+  "yandere": 5,
+  "yandere_explicit": 0,
+  "safebooru": 94
+ }
+]

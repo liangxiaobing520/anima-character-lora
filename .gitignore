@@ -1,0 +1,32 @@
+# ===== 训练产物与素材（体积大，不进 git）=====
+# 模型权重走 GitHub Release 附件下载，见 README 的模型清单
+output/
+train/
+raw/
+logs/
+batch_state/
+concept_loras/
+verify_compare/
+pose_test/
+verify/
+by_character/
+models/
+
+# ===== 模型与中间产物 =====
+*.safetensors
+*.ckpt
+*.npz
+*.pt
+*.pth
+
+# ===== 数据大文件（posts.jsonl 约 22M，含全部图片元数据）=====
+metadata/posts.jsonl
+
+# ===== 临时/备份/缓存 =====
+*.bak-*
+*.bak
+*.log
+*.tmp
+__pycache__/
+*.pyc
+.DS_Store

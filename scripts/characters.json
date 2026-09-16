@@ -1,0 +1,523 @@
+{
+  "_comment": "原神女角色表。yandere/safebooru 标签。skip=true 的角色（幼态）完全不采集，任何分级都不下载。",
+  "characters": [
+    {
+      "id": "raiden_shogun",
+      "cn": "雷电将军",
+      "sb": "raiden_shogun_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "yae_miko",
+      "cn": "八重神子",
+      "sb": "yae_miko_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "ganyu",
+      "cn": "甘雨",
+      "sb": "ganyu_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "shenhe",
+      "cn": "申鹤",
+      "sb": "shenhe_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "eula",
+      "cn": "优菈",
+      "sb": "eula_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "lisa",
+      "cn": "丽莎",
+      "sb": "lisa_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "ningguang",
+      "cn": "凝光",
+      "sb": "ningguang_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "beidou",
+      "cn": "北斗",
+      "sb": "beidou_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "jean",
+      "cn": "琴",
+      "sb": "jean_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "rosaria",
+      "cn": "罗莎莉亚",
+      "sb": "rosaria_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "yelan",
+      "cn": "夜兰",
+      "sb": "yelan_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "kujou_sara",
+      "cn": "九条裟罗",
+      "sb": "kujou_sara_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "arlecchino",
+      "cn": "阿蕾奇诺",
+      "sb": "arlecchino_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "clorinde",
+      "cn": "克洛琳德",
+      "sb": "clorinde_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "navia",
+      "cn": "娜维娅",
+      "sb": "navia_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "xianyun",
+      "cn": "闲云",
+      "sb": "xianyun_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "chiori",
+      "cn": "千织",
+      "sb": "chiori_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "mavuika",
+      "cn": "玛薇卡",
+      "sb": "mavuika_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "xilonen",
+      "cn": "希诺宁",
+      "sb": "xilonen_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "citlali",
+      "cn": "茜特菈莉",
+      "sb": "citlali_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "skirk",
+      "cn": "丝柯克",
+      "sb": "skirk_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "candace",
+      "cn": "坎蒂丝",
+      "sb": "candace_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "dehya",
+      "cn": "迪希雅",
+      "sb": "dehya_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "emilie",
+      "cn": "艾梅莉埃",
+      "sb": "emilie_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "signora",
+      "cn": "女士",
+      "sb": "signora",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "lumine",
+      "cn": "荧",
+      "sb": "lumine_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "hu_tao",
+      "cn": "胡桃",
+      "sb": "hu_tao_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "keqing",
+      "cn": "刻晴",
+      "sb": "keqing_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "mona",
+      "cn": "莫娜",
+      "sb": "mona_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "kamisato_ayaka",
+      "cn": "神里绫华",
+      "sb": "kamisato_ayaka_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "yoimiya",
+      "cn": "宵宫",
+      "sb": "yoimiya_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "sangonomiya_kokomi",
+      "cn": "珊瑚宫心海",
+      "sb": "sangonomiya_kokomi_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "fischl",
+      "cn": "菲谢尔",
+      "sb": "fischl_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "barbara",
+      "cn": "芭芭拉",
+      "sb": "barbara_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "xiangling",
+      "cn": "香菱",
+      "sb": "xiangling_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "noelle",
+      "cn": "诺艾尔",
+      "sb": "noelle_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "sucrose",
+      "cn": "砂糖",
+      "sb": "sucrose_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "yanfei",
+      "cn": "烟绯",
+      "sb": "yanfei_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "yun_jin",
+      "cn": "云堇",
+      "sb": "yun_jin_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "kuki_shinobu",
+      "cn": "久岐忍",
+      "sb": "kuki_shinobu_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "nilou",
+      "cn": "妮露",
+      "sb": "nilou_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "layla",
+      "cn": "莱依拉",
+      "sb": "layla_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "faruzan",
+      "cn": "珐露珊",
+      "sb": "faruzan_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "lynette",
+      "cn": "琳妮特",
+      "sb": "lynette_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "furina",
+      "cn": "芙宁娜",
+      "sb": "furina_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "charlotte",
+      "cn": "夏洛蒂",
+      "sb": "charlotte_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "mualani",
+      "cn": "玛拉妮",
+      "sb": "mualani_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "chasca",
+      "cn": "恰斯卡",
+      "sb": "chasca_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "lan_yan",
+      "cn": "蓝砚",
+      "sb": "lan_yan_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "varesa",
+      "cn": "瓦蕾莎",
+      "sb": "varesa_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "escoffier",
+      "cn": "爱可菲",
+      "sb": "escoffier_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "iansan",
+      "cn": "伊安珊",
+      "sb": "iansan_(genshin_impact)",
+      "adult": true,
+      "skip": false
+    },
+    {
+      "id": "klee",
+      "cn": "可莉",
+      "sb": "klee_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "qiqi",
+      "cn": "七七",
+      "sb": "qiqi_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "diona",
+      "cn": "迪奥娜",
+      "sb": "diona_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "sayu",
+      "cn": "早柚",
+      "sb": "sayu_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "nahida",
+      "cn": "纳西妲",
+      "sb": "nahida_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "yaoyao",
+      "cn": "瑶瑶",
+      "sb": "yaoyao_(genshin_impact)",
+      "adult": false,
+      "skip": true
+    },
+    {
+      "id": "nangong_wan",
+      "cn": "南宫婉",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "zi_ling",
+      "cn": "紫灵",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "yin_yue",
+      "cn": "银月",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "dong_xuaner",
+      "cn": "董宣儿",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "chen_qiaoqian",
+      "cn": "陈巧倩",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "mu_peiling",
+      "cn": "慕沛灵",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "lin_yinping",
+      "cn": "林银屏",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "mo_caihuan",
+      "cn": "墨彩环",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "yuan_yao",
+      "cn": "元瑶",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "yan_li",
+      "cn": "妍丽",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "liu_lee",
+      "cn": "柳乐儿",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "gan_jiuzhen",
+      "cn": "甘九真",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "ling_yuling",
+      "cn": "凌玉灵",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    },
+    {
+      "id": "yan_ruyan",
+      "cn": "燕如嫣",
+      "sb": "",
+      "adult": true,
+      "skip": false,
+      "series": "fanren_xiuxian_zhuan"
+    }
+  ]
+}

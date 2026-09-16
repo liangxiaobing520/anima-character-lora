@@ -1,0 +1,596 @@
+[
+ {
+  "id": "arlecchino",
+  "cn": "阿蕾奇诺",
+  "kept": 474,
+  "raw": 600,
+  "nsfw": 217,
+  "multi": 91,
+  "hat": 11
+ },
+ {
+  "id": "barbara",
+  "cn": "芭芭拉",
+  "kept": 180,
+  "raw": 300,
+  "nsfw": 0,
+  "multi": 66,
+  "hat": 114
+ },
+ {
+  "id": "beidou",
+  "cn": "北斗",
+  "kept": 332,
+  "raw": 547,
+  "nsfw": 171,
+  "multi": 137,
+  "hat": 31
+ },
+ {
+  "id": "candace",
+  "cn": "坎蒂丝",
+  "kept": 192,
+  "raw": 300,
+  "nsfw": 73,
+  "multi": 79,
+  "hat": 43
+ },
+ {
+  "id": "charlotte",
+  "cn": "夏洛蒂",
+  "kept": 299,
+  "raw": 300,
+  "nsfw": 21,
+  "multi": 0,
+  "hat": 106
+ },
+ {
+  "id": "chasca",
+  "cn": "恰斯卡",
+  "kept": 139,
+  "raw": 300,
+  "nsfw": 25,
+  "multi": 139,
+  "hat": 91
+ },
+ {
+  "id": "chen_qiaoqian",
+  "cn": "陈巧倩",
+  "kept": 180,
+  "raw": 180,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "chiori",
+  "cn": "千织",
+  "kept": 287,
+  "raw": 300,
+  "nsfw": 80,
+  "multi": 2,
+  "hat": 118
+ },
+ {
+  "id": "citlali",
+  "cn": "茜特菈莉",
+  "kept": 273,
+  "raw": 300,
+  "nsfw": 140,
+  "multi": 11,
+  "hat": 30
+ },
+ {
+  "id": "clorinde",
+  "cn": "克洛琳德",
+  "kept": 318,
+  "raw": 505,
+  "nsfw": 116,
+  "multi": 102,
+  "hat": 100
+ },
+ {
+  "id": "dehya",
+  "cn": "迪希雅",
+  "kept": 248,
+  "raw": 300,
+  "nsfw": 138,
+  "multi": 18,
+  "hat": 1
+ },
+ {
+  "id": "dong_xuaner",
+  "cn": "董宣儿",
+  "kept": 148,
+  "raw": 155,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "emilie",
+  "cn": "艾梅莉埃",
+  "kept": 166,
+  "raw": 225,
+  "nsfw": 20,
+  "multi": 47,
+  "hat": 136
+ },
+ {
+  "id": "escoffier",
+  "cn": "爱可菲",
+  "kept": 195,
+  "raw": 300,
+  "nsfw": 36,
+  "multi": 69,
+  "hat": 146
+ },
+ {
+  "id": "eula",
+  "cn": "优菈",
+  "kept": 526,
+  "raw": 664,
+  "nsfw": 177,
+  "multi": 75,
+  "hat": 158
+ },
+ {
+  "id": "faruzan",
+  "cn": "珐露珊",
+  "kept": 266,
+  "raw": 300,
+  "nsfw": 95,
+  "multi": 16,
+  "hat": 122
+ },
+ {
+  "id": "fischl",
+  "cn": "菲谢尔",
+  "kept": 300,
+  "raw": 300,
+  "nsfw": 143,
+  "multi": 0,
+  "hat": 1
+ },
+ {
+  "id": "furina",
+  "cn": "芙宁娜",
+  "kept": 564,
+  "raw": 751,
+  "nsfw": 121,
+  "multi": 99,
+  "hat": 229
+ },
+ {
+  "id": "gan_jiuzhen",
+  "cn": "甘九真",
+  "kept": 49,
+  "raw": 51,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "ganyu",
+  "cn": "甘雨",
+  "kept": 594,
+  "raw": 684,
+  "nsfw": 239,
+  "multi": 41,
+  "hat": 32
+ },
+ {
+  "id": "hu_tao",
+  "cn": "胡桃",
+  "kept": 300,
+  "raw": 300,
+  "nsfw": 125,
+  "multi": 0,
+  "hat": 38
+ },
+ {
+  "id": "iansan",
+  "cn": "伊安珊",
+  "kept": 68,
+  "raw": 186,
+  "nsfw": 1,
+  "multi": 103,
+  "hat": 14
+ },
+ {
+  "id": "jean",
+  "cn": "琴",
+  "kept": 125,
+  "raw": 300,
+  "nsfw": 1,
+  "multi": 104,
+  "hat": 10
+ },
+ {
+  "id": "kamisato_ayaka",
+  "cn": "神里绫华",
+  "kept": 300,
+  "raw": 300,
+  "nsfw": 188,
+  "multi": 0,
+  "hat": 6
+ },
+ {
+  "id": "keqing",
+  "cn": "刻晴",
+  "kept": 300,
+  "raw": 300,
+  "nsfw": 158,
+  "multi": 0,
+  "hat": 28
+ },
+ {
+  "id": "kujou_sara",
+  "cn": "九条裟罗",
+  "kept": 308,
+  "raw": 326,
+  "nsfw": 179,
+  "multi": 9,
+  "hat": 1
+ },
+ {
+  "id": "kuki_shinobu",
+  "cn": "久岐忍",
+  "kept": 269,
+  "raw": 300,
+  "nsfw": 80,
+  "multi": 13,
+  "hat": 58
+ },
+ {
+  "id": "lan_yan",
+  "cn": "蓝砚",
+  "kept": 142,
+  "raw": 187,
+  "nsfw": 28,
+  "multi": 29,
+  "hat": 101
+ },
+ {
+  "id": "layla",
+  "cn": "莱依拉",
+  "kept": 231,
+  "raw": 300,
+  "nsfw": 18,
+  "multi": 39,
+  "hat": 150
+ },
+ {
+  "id": "lin_yinping",
+  "cn": "林银屏",
+  "kept": 13,
+  "raw": 13,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "ling_yuling",
+  "cn": "凌玉灵",
+  "kept": 105,
+  "raw": 105,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "lisa",
+  "cn": "丽莎",
+  "kept": 115,
+  "raw": 300,
+  "nsfw": 12,
+  "multi": 109,
+  "hat": 76
+ },
+ {
+  "id": "liu_lee",
+  "cn": "柳乐儿",
+  "kept": 32,
+  "raw": 41,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "lumine",
+  "cn": "荧",
+  "kept": 300,
+  "raw": 300,
+  "nsfw": 169,
+  "multi": 0,
+  "hat": 19
+ },
+ {
+  "id": "lynette",
+  "cn": "琳妮特",
+  "kept": 230,
+  "raw": 300,
+  "nsfw": 116,
+  "multi": 40,
+  "hat": 16
+ },
+ {
+  "id": "mavuika",
+  "cn": "玛薇卡",
+  "kept": 202,
+  "raw": 300,
+  "nsfw": 74,
+  "multi": 64,
+  "hat": 6
+ },
+ {
+  "id": "mo_caihuan",
+  "cn": "墨彩环",
+  "kept": 173,
+  "raw": 195,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "mona",
+  "cn": "莫娜",
+  "kept": 115,
+  "raw": 300,
+  "nsfw": 10,
+  "multi": 140,
+  "hat": 79
+ },
+ {
+  "id": "mu_peiling",
+  "cn": "慕沛灵",
+  "kept": 294,
+  "raw": 298,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "mualani",
+  "cn": "玛拉妮",
+  "kept": 152,
+  "raw": 300,
+  "nsfw": 50,
+  "multi": 111,
+  "hat": 59
+ },
+ {
+  "id": "nangong_wan",
+  "cn": "南宫婉",
+  "kept": 264,
+  "raw": 295,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "navia",
+  "cn": "娜维娅",
+  "kept": 291,
+  "raw": 544,
+  "nsfw": 132,
+  "multi": 135,
+  "hat": 62
+ },
+ {
+  "id": "nilou",
+  "cn": "妮露",
+  "kept": 299,
+  "raw": 300,
+  "nsfw": 168,
+  "multi": 0,
+  "hat": 7
+ },
+ {
+  "id": "ningguang",
+  "cn": "凝光",
+  "kept": 370,
+  "raw": 637,
+  "nsfw": 184,
+  "multi": 104,
+  "hat": 83
+ },
+ {
+  "id": "noelle",
+  "cn": "诺艾尔",
+  "kept": 197,
+  "raw": 300,
+  "nsfw": 3,
+  "multi": 61,
+  "hat": 144
+ },
+ {
+  "id": "raiden_shogun",
+  "cn": "雷电将军",
+  "kept": 898,
+  "raw": 1992,
+  "nsfw": 329,
+  "multi": 605,
+  "hat": 373
+ },
+ {
+  "id": "rosaria",
+  "cn": "罗莎莉亚",
+  "kept": 428,
+  "raw": 579,
+  "nsfw": 188,
+  "multi": 64,
+  "hat": 11
+ },
+ {
+  "id": "sangonomiya_kokomi",
+  "cn": "珊瑚宫心海",
+  "kept": 299,
+  "raw": 300,
+  "nsfw": 171,
+  "multi": 0,
+  "hat": 14
+ },
+ {
+  "id": "shenhe",
+  "cn": "申鹤",
+  "kept": 438,
+  "raw": 664,
+  "nsfw": 194,
+  "multi": 75,
+  "hat": 56
+ },
+ {
+  "id": "signora",
+  "cn": "女士",
+  "kept": 63,
+  "raw": 65,
+  "nsfw": 48,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "skirk",
+  "cn": "丝柯克",
+  "kept": 210,
+  "raw": 300,
+  "nsfw": 73,
+  "multi": 45,
+  "hat": 91
+ },
+ {
+  "id": "sucrose",
+  "cn": "砂糖",
+  "kept": 261,
+  "raw": 300,
+  "nsfw": 98,
+  "multi": 21,
+  "hat": 51
+ },
+ {
+  "id": "varesa",
+  "cn": "瓦蕾莎",
+  "kept": 235,
+  "raw": 300,
+  "nsfw": 24,
+  "multi": 38,
+  "hat": 126
+ },
+ {
+  "id": "xiangling",
+  "cn": "香菱",
+  "kept": 207,
+  "raw": 300,
+  "nsfw": 83,
+  "multi": 78,
+  "hat": 25
+ },
+ {
+  "id": "xianyun",
+  "cn": "闲云",
+  "kept": 143,
+  "raw": 300,
+  "nsfw": 45,
+  "multi": 59,
+  "hat": 47
+ },
+ {
+  "id": "xilonen",
+  "cn": "希诺宁",
+  "kept": 143,
+  "raw": 300,
+  "nsfw": 36,
+  "multi": 105,
+  "hat": 10
+ },
+ {
+  "id": "yae_miko",
+  "cn": "八重神子",
+  "kept": 345,
+  "raw": 697,
+  "nsfw": 204,
+  "multi": 134,
+  "hat": 24
+ },
+ {
+  "id": "yan_li",
+  "cn": "妍丽",
+  "kept": 59,
+  "raw": 65,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "yan_ruyan",
+  "cn": "燕如嫣",
+  "kept": 57,
+  "raw": 58,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "yanfei",
+  "cn": "烟绯",
+  "kept": 259,
+  "raw": 300,
+  "nsfw": 83,
+  "multi": 19,
+  "hat": 64
+ },
+ {
+  "id": "yelan",
+  "cn": "夜兰",
+  "kept": 407,
+  "raw": 600,
+  "nsfw": 217,
+  "multi": 91,
+  "hat": 8
+ },
+ {
+  "id": "yin_yue",
+  "cn": "银月",
+  "kept": 267,
+  "raw": 306,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "yoimiya",
+  "cn": "宵宫",
+  "kept": 299,
+  "raw": 300,
+  "nsfw": 128,
+  "multi": 0,
+  "hat": 21
+ },
+ {
+  "id": "yuan_yao",
+  "cn": "元瑶",
+  "kept": 244,
+  "raw": 305,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ },
+ {
+  "id": "yun_jin",
+  "cn": "云堇",
+  "kept": 256,
+  "raw": 300,
+  "nsfw": 58,
+  "multi": 21,
+  "hat": 119
+ },
+ {
+  "id": "zi_ling",
+  "cn": "紫灵",
+  "kept": 299,
+  "raw": 317,
+  "nsfw": 0,
+  "multi": 0,
+  "hat": 0
+ }
+]
