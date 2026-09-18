@@ -22,42 +22,73 @@
 
 ## 📦 模型下载
 
-**20 个角色 LoRA**，每个约 **88 MB** —— `dim 32 / alpha 16 / 640px / bf16`。
+**60 个角色 LoRA**，每个约 **88 MB** —— `dim 32 / alpha 16 / 768px / bf16`。
 全部在 [**Releases**](../../releases) 页面按角色下载（队列仍在训练，会继续追加）。
 
 | 角色 | ID | 文件 | 大小 |
 |---|---|---|---|
 | **《原神》** | | | |
 | 阿蕾奇诺 | `arlecchino` | `arlecchino_anima_lora.safetensors` | 88 MB |
+| 芭芭拉 | `barbara` | `barbara_anima_lora.safetensors` | 88 MB |
+| 北斗 | `beidou` | `beidou_anima_lora.safetensors` | 88 MB |
+| 坎蒂丝 | `candace` | `candace_anima_lora.safetensors` | 88 MB |
+| 夏洛蒂 | `charlotte` | `charlotte_anima_lora.safetensors` | 88 MB |
+| 恰斯卡 | `chasca` | `chasca_anima_lora.safetensors` | 88 MB |
+| 千织 | `chiori` | `chiori_anima_lora.safetensors` | 88 MB |
+| 茜特菈莉 | `citlali` | `citlali_anima_lora.safetensors` | 88 MB |
+| 克洛琳德 | `clorinde` | `clorinde_anima_lora.safetensors` | 88 MB |
+| 迪希雅 | `dehya` | `dehya_anima_lora.safetensors` | 88 MB |
+| 爱可菲 | `escoffier` | `escoffier_anima_lora.safetensors` | 88 MB |
 | 优菈 | `eula` | `eula_anima_lora.safetensors` | 88 MB |
+| 珐露珊 | `faruzan` | `faruzan_anima_lora.safetensors` | 88 MB |
 | 菲谢尔 | `fischl` | `fischl_anima_lora.safetensors` | 88 MB |
 | 芙宁娜 | `furina` | `furina_anima_lora.safetensors` | 88 MB |
+| 甘雨 | `ganyu` | `ganyu_anima_lora.safetensors` | 88 MB |
 | 胡桃 | `hu_tao` | `hu_tao_anima_lora.safetensors` | 88 MB |
+| 琴 | `jean` | `jean_anima_lora.safetensors` | 88 MB |
 | 神里绫华 | `kamisato_ayaka` | `kamisato_ayaka_anima_lora.safetensors` | 88 MB |
 | 刻晴 | `keqing` | `keqing_anima_lora.safetensors` | 88 MB |
+| 九条裟罗 | `kujou_sara` | `kujou_sara_anima_lora.safetensors` | 88 MB |
+| 久岐忍 | `kuki_shinobu` | `kuki_shinobu_anima_lora.safetensors` | 88 MB |
+| 莱依拉 | `layla` | `layla_anima_lora.safetensors` | 88 MB |
+| 丽莎 | `lisa` | `lisa_anima_lora.safetensors` | 88 MB |
+| 荧 | `lumine` | `lumine_anima_lora.safetensors` | 88 MB |
+| 琳妮特 | `lynette` | `lynette_anima_lora.safetensors` | 88 MB |
+| 玛薇卡 | `mavuika` | `mavuika_anima_lora.safetensors` | 88 MB |
 | 莫娜 | `mona` | `mona_anima_lora.safetensors` | 88 MB |
+| 玛拉妮 | `mualani` | `mualani_anima_lora.safetensors` | 88 MB |
+| 娜维娅 | `navia` | `navia_anima_lora.safetensors` | 88 MB |
+| 妮露 | `nilou` | `nilou_anima_lora.safetensors` | 88 MB |
+| 凝光 | `ningguang` | `ningguang_anima_lora.safetensors` | 88 MB |
+| 诺艾尔 | `noelle` | `noelle_anima_lora.safetensors` | 88 MB |
 | 雷电将军 | `raiden_shogun` | `raiden_shogun_anima_lora.safetensors` | 88 MB |
+| 罗莎莉亚 | `rosaria` | `rosaria_anima_lora.safetensors` | 88 MB |
 | 珊瑚宫心海 | `sangonomiya_kokomi` | `sangonomiya_kokomi_anima_lora.safetensors` | 88 MB |
 | 申鹤 | `shenhe` | `shenhe_anima_lora.safetensors` | 88 MB |
+| 丝柯克 | `skirk` | `skirk_anima_lora.safetensors` | 88 MB |
+| 砂糖 | `sucrose` | `sucrose_anima_lora.safetensors` | 88 MB |
+| 瓦蕾莎 | `varesa` | `varesa_anima_lora.safetensors` | 88 MB |
+| 香菱 | `xiangling` | `xiangling_anima_lora.safetensors` | 88 MB |
+| 闲云 | `xianyun` | `xianyun_anima_lora.safetensors` | 88 MB |
+| 希诺宁 | `xilonen` | `xilonen_anima_lora.safetensors` | 88 MB |
 | 八重神子 | `yae_miko` | `yae_miko_anima_lora.safetensors` | 88 MB |
+| 烟绯 | `yanfei` | `yanfei_anima_lora.safetensors` | 88 MB |
+| 夜兰 | `yelan` | `yelan_anima_lora.safetensors` | 88 MB |
+| 宵宫 | `yoimiya` | `yoimiya_anima_lora.safetensors` | 88 MB |
 | **《凡人修仙传》** | | | |
 | 陈巧倩 | `chen_qiaoqian` | `chen_qiaoqian_anima_lora.safetensors` | 88 MB |
 | 董宣儿 | `dong_xuaner` | `dong_xuaner_anima_lora.safetensors` | 88 MB |
+| 甘九真 | `gan_jiuzhen` | `gan_jiuzhen_anima_lora.safetensors` | 88 MB |
+| 凌玉灵 | `ling_yuling` | `ling_yuling_anima_lora.safetensors` | 88 MB |
+| 柳乐儿 | `liu_lee` | `liu_lee_anima_lora.safetensors` | 88 MB |
 | 墨彩环 | `mo_caihuan` | `mo_caihuan_anima_lora.safetensors` | 88 MB |
 | 慕沛灵 | `mu_peiling` | `mu_peiling_anima_lora.safetensors` | 88 MB |
 | 南宫婉 | `nangong_wan` | `nangong_wan_anima_lora.safetensors` | 88 MB |
+| 妍丽 | `yan_li` | `yan_li_anima_lora.safetensors` | 88 MB |
+| 燕如嫣 | `yan_ruyan` | `yan_ruyan_anima_lora.safetensors` | 88 MB |
 | 银月 | `yin_yue` | `yin_yue_anima_lora.safetensors` | 88 MB |
 | 元瑶 | `yuan_yao` | `yuan_yao_anima_lora.safetensors` | 88 MB |
 | 紫灵 | `zi_ling` | `zi_ling_anima_lora.safetensors` | 88 MB |
-
-**ComfyUI 用法**：把 `.safetensors` 放进 `ComfyUI/models/loras/`，然后在 prompt 里写
-
-```
-<lora:furina_anima_lora:0.85> furina_\(genshin_impact\), 1girl, solo, ...
-```
-
-> LoRA 权重建议 **0.8~0.9**。角色 LoRA 只记「角色是谁」（脸型 / 发色 / 瞳色），
-> **服装配饰要写进 prompt**，且用训练 caption 里出现过的那套 tag。
 
 ## 📁 目录结构
 
@@ -77,7 +108,7 @@ genshin_dataset/
 ├── metadata/                 采集元数据与质检报告
 ├── raw/<角色id>/             ★ 采集原图 + 同名 .txt caption
 ├── train/by_character/<id>/  ★ 单角色训练集（硬链接）
-├── train/mixed/              全角色混合集（训综合风格 LoRA）
+├── train/mixed/              （默认不再生成；无人引用，见 build_dataset.py --with-mixed）
 ├── output/                   ★ 训练产物（LoRA 权重，走 Releases）
 └── logs/                     队列与单角色训练日志
 ```
