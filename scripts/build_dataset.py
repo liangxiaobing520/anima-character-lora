@@ -96,6 +96,26 @@ def link(src, dst):
             return False
 
 
+def prune_dir(dirpath, keep_files):
+    """删掉 dirpath 里不在 keep_files 中的图/标注。返回删除数。
+    ⚠️ **必须保留 .npz** —— 那是 --cache_latents_to_disk 落下的 latent 缓存，
+       删了就得重新缓存，每个角色白等几分钟。
+    ⚠️ 容错 FileNotFoundError：两条队列切换时可能有两个 build 并发清理同一目录
+       （2026-09-15 就是被这个 FileNotFoundError 整挂了整个 build，连带中断训练队列）。"""
+    if not os.path.isdir(dirpath):
+        return 0
+    n = 0
+    for fn in os.listdir(dirpath):
+        if fn.endswith(".npz") or fn in keep_files:
+            continue
+        try:
+            os.remove(os.path.join(dirpath, fn))
+            n += 1
+        except (FileNotFoundError, IsADirectoryError, PermissionError):
+            pass
+    return n
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--min-side", type=int, default=900)
@@ -110,6 +130,11 @@ def main():
     ap.add_argument("--solo-only", action="store_true",
                     help="剔除多角色同框（Ngirls 标签，或出现别的原神角色名）")
     ap.add_argument("--out", default="mixed")
+    # 全角色混合集默认不再生成（2026-09-16）：全项目没有任何训练路径引用它
+    # （train_lora.sh 用的是 train/by_character/<char> 与 <char>_hat），
+    # 但每跑一次 build 都往 train/mixed 里再写 4 万个硬链接 —— 只涨不用，已到 41804 个文件。
+    ap.add_argument("--with-mixed", action="store_true",
+                    help="额外生成 train/<out> 全角色混合集（默认关；只用于训【综合风格】LoRA 的实验）")
     args = ap.parse_args()
 
     chars = []
@@ -118,7 +143,10 @@ def main():
             chars = [c for c in json.load(f)["characters"] if not c.get("skip")]
     cn_map = {c["id"]: c["cn"] for c in chars}
 
-    for d in (TRAIN, os.path.join(TRAIN, "by_character"), os.path.join(TRAIN, args.out), META):
+    dirs = [TRAIN, os.path.join(TRAIN, "by_character"), META]
+    if args.with_mixed:
+        dirs.append(os.path.join(TRAIN, args.out))
+    for d in dirs:
         os.makedirs(d, exist_ok=True)
 
     report, total = [], 0
@@ -174,7 +202,25 @@ def main():
         cdir_out = os.path.join(TRAIN, "by_character", char_id)
         os.makedirs(cdir_out, exist_ok=True)
         # 混合目录
-        mdir_out = os.path.join(TRAIN, args.out)
+        mdir_out = os.path.join(TRAIN, args.out) if args.with_mixed else None
+
+        # ---------- 重建前先清掉不再符合条件的旧文件（2026-09-16 修）----------
+        # 本函数原来是"只增不删"：目录 exist_ok=True、图靠 link() 写进去，而 link()
+        # 见 dst 已存在就直接 return —— 旧文件永远回收不掉。后果是早期用更低 min-side
+        # 建过的图会永久滞留在训练集里，当前阈值根本管不住它们。
+        # 实测：46 个角色的训练集混着短边 <640 的图（raiden_shogun 96 张、yan_ruyan 48 张），
+        # 抽查发现这些图的 raw 同源在、是硬链接 —— 是历史残留，不是当前逻辑放行的。
+        # ⚠️ cands 为空时**不清理**：宁可留下陈旧文件，也不能因为 raw/ 一时读不到
+        #    就把一个几百张的训练集整个抹掉。
+        if cands:
+            keep = set()
+            for f, _w, _h, _nsfw, _md5 in cands:
+                keep.add(f)
+                keep.add(os.path.splitext(f)[0] + ".txt")
+            n_pruned = prune_dir(cdir_out, keep)
+            if n_pruned:
+                print("  %s 清理陈旧文件 %d 个（不符合当前 --min-side %d）"
+                      % (char_id, n_pruned, args.min_side), flush=True)
 
         n_nsfw = 0
         for f, w, h, is_nsfw, h_md5 in cands:
@@ -184,9 +230,10 @@ def main():
             stem = os.path.splitext(f)[0]
             link(src, os.path.join(cdir_out, f))
             link(os.path.join(cdir, stem + ".txt"), os.path.join(cdir_out, stem + ".txt"))
-            link(src, os.path.join(mdir_out, "%s_%s" % (char_id, f)))
-            link(os.path.join(cdir, stem + ".txt"),
-                 os.path.join(mdir_out, "%s_%s.txt" % (char_id, stem)))
+            if mdir_out:
+                link(src, os.path.join(mdir_out, "%s_%s" % (char_id, f)))
+                link(os.path.join(cdir, stem + ".txt"),
+                     os.path.join(mdir_out, "%s_%s.txt" % (char_id, stem)))
             n_nsfw += is_nsfw
         total += len(cands)
         # 自动建"特色加权子集"：把带帽子/头饰的图再硬链接一份到 <角色>_hat，
@@ -241,18 +288,22 @@ batch_size = 1
   caption_extension = ".txt"
   num_repeats = 1
 """ % os.path.join(TRAIN, args.out)
-    with open(os.path.join(TRAIN, "kohya_%s.toml" % args.out), "w", encoding="utf-8") as f:
-        f.write(toml)
+    if args.with_mixed:
+        with open(os.path.join(TRAIN, "kohya_%s.toml" % args.out), "w", encoding="utf-8") as f:
+            f.write(toml)
 
     with open(os.path.join(META, "dataset_report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=1)
 
-    n_files = len([f for f in os.listdir(os.path.join(TRAIN, args.out))
-                   if f.lower().endswith(IMG_EXT)])
     print("\n=== 完成 ===")
-    print("混合目录 %s: %d 张（含 caption）" % (args.out, n_files))
+    if args.with_mixed:
+        n_files = len([f for f in os.listdir(os.path.join(TRAIN, args.out))
+                       if f.lower().endswith(IMG_EXT)])
+        print("混合目录 %s: %d 张（含 caption）" % (args.out, n_files))
+        print("kohya 配置: train/kohya_%s.toml" % args.out)
+    else:
+        print("混合目录: 未生成（--with-mixed 未开，无人引用它）")
     print("单角色目录: %d 个角色" % len(report))
-    print("kohya 配置: train/kohya_%s.toml" % args.out)
 
 
 if __name__ == "__main__":
