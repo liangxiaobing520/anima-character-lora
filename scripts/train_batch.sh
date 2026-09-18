@@ -13,7 +13,11 @@
 #   bash train_batch.sh furina hu_tao        # 只跑指定角色
 #
 # 环境变量覆盖:
-#   TARGET_IMG=800 DIM=32 RES=640 bash train_batch.sh
+#   TARGET_IMG=800 DIM=32 RES=768 bash train_batch.sh
+#
+# 分辨率(2026-09-16 用户决定): 队列统一走 **768**，与 train_lora.sh 的默认值对齐。
+#   之前这里是 640，导致"单跑 768 / 队列 640"两套默认值并存、估工期按错的那套算。
+#   代价：768 比 640 慢（实测约 50%~4 倍区间，取决于 bucket 分布），故本队列耗时显著变长。
 # ============================================================
 set -u
 
@@ -24,7 +28,7 @@ mkdir -p "$STATE"
 
 TARGET_IMG=${TARGET_IMG:-800}
 DIM=${DIM:-32}
-RES=${RES:-640}
+RES=${RES:-768}
 
 CHARS="$*"
 if [ -z "$CHARS" ]; then

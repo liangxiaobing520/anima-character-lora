@@ -27,11 +27,15 @@ FANREN="nangong_wan zi_ling yin_yue dong_xuaner chen_qiaoqian mu_peiling \
 mo_caihuan yuan_yao yan_li liu_lee gan_jiuzhen \
 ling_yuling yan_ruyan"
 
+# ⚠️ 这份名单必须跟 raw/ 里实际到位的角色同步，否则新采的角色会被**静默漏掉**
+#    （2026-09-17 实测：名单只覆盖 15 个待训，实际有 30 个 —— 不带参数起队列会漏训一半）
 GENSHIN="furina hu_tao yae_miko kamisato_ayaka mona keqing arlecchino shenhe \
 eula fischl sangonomiya_kokomi barbara jean lynette yoimiya xiangling \
 ningguang citlali noelle kujou_sara navia clorinde yelan faruzan \
 sucrose rosaria beidou chiori yun_jin mavuika lisa signora mualani \
-kuki_shinobu charlotte"
+kuki_shinobu charlotte \
+chasca candace dehya escoffier layla lumine nilou skirk varesa xilonen \
+xianyun yanfei emilie lan_yan iansan"
 
 if [ -n "${1:-}" ]; then
   CHARS="$*"
