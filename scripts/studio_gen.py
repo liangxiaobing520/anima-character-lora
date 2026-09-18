@@ -46,6 +46,11 @@ FULL_BODY_POS_NOSTAND = "full body, from head to toe, feet visible, "
 FULL_BODY_NEG = (", close-up, portrait, upper body, half body, cowboy shot, "
                  "cropped legs, cropped, headshot, zoom in")
 SOLO_NEG = "(extra people:1.4), (2girls:1.3), duplicate, "
+# 2026-09-16 修复：单人分支此前从不发 1girl —— 而训练 caption 全是 "1girl, solo"，
+# train/inference 的 token 对不上，会让 LoRA 的性别信号漂移
+# （实测燕如嫣新 LoRA 的标准立绘被画成男装人物）。现在默认带上主体词 + 性别反向负面。
+SUBJECT_DEFAULT = "1girl, solo, female, "
+GENDER_NEG = "1boy, male, man, "
 HAND_POS = "perfect hands, detailed hands, five fingers, "
 HAND_NEG = ("bad hands, poorly drawn hands, extra fingers, missing fingers, fused fingers, "
             "mutated hands, malformed hands, claw shaped fingers, ")
@@ -202,6 +207,7 @@ FRAMINGS = {
     "scenic_h":    ("风景横版", 0, 1216, 832),
     "scenic_wide": ("风景宽幅", 0, 1536, 864),
     "solo_v":  ("单人竖版", 1, V_W, V_H),
+    "solo_h":  ("单人横版", 1, H_W, H_H),
     "duo_h":   ("双人横版", 2, H_W, H_H),
     "trio_h":  ("三人横版", 3, H_W, H_H),
     "quad_h":  ("四人横版", 4, H_W, H_H),
@@ -404,7 +410,7 @@ def build_prompt(p):
     elif people > 1:
         pos = Q + "%dgirls, multiple girls, " % people + body
     else:
-        pos = Q + body
+        pos = Q + SUBJECT_DEFAULT + body
     if char_tags:
         tags.append(" ".join(char_tags))
     if pose_tags:
@@ -430,6 +436,9 @@ def build_prompt(p):
         if mode != "sheet" and people <= 1:
             neg += SOLO_NEG
         neg += FULL_BODY_NEG
+    # 单人主体为女性时压掉男性特征 —— 两种模式都加：性别不是构图，防漂移是刚需
+    if mode != "sheet" and people <= 1:
+        neg += GENDER_NEG
     neg_extra = (p.get("negative") or "").strip().strip(",").strip()
     if neg_extra:
         # 各固定块结尾不一定带分隔符（FULL_BODY_NEG 就以 "zoom in" 收尾），
